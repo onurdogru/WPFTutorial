@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Net.NetworkInformation;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,9 +17,32 @@ namespace WPFTutorial
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool running = false;
         public MainWindow()
         {
             InitializeComponent();
+
+
+            //tbHello.Text = "welcome my planet";
+            //btnRun.Content = "Stop";
+        }
+
+        private void btnToggleRun_Click(object sender, RoutedEventArgs e)
+        {
+            if (running)
+            {
+                //stop
+                tbStatus.Text = "Stopped";
+                btnToggleRun.Content = "Run";
+            }
+            else
+            {
+                //run
+                tbStatus.Text = "Running";
+                btnToggleRun.Content = "Stop";
+            }
+            
+            running = !running;
         }
     }
 }

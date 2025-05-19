@@ -11,5 +11,9 @@
 
         <TextBlock Text="Hi Mars" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
+        <TextBlock Name="tbStatus" FontSize="30"/>
+        <Button Name="btnToggleRun" Width="100" Height="50" VerticalAlignment="Center" 
+                HorizontalAlignment="Center" Content="Run"  FontSize="20"   Click="btnToggleRun_Click"/> 
+
     </Grid>
 </Window>
